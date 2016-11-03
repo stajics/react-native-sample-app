@@ -1,11 +1,12 @@
 import React, { Component, PropTypes } from 'react';
 import {
   View,
-  Text,
   StyleSheet,
 } from 'react-native';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+// components
+import Home from './home/Home.react';
 
 const styles = StyleSheet.create({
   container: {
@@ -22,23 +23,23 @@ const defaultProps = {
   text: 'Hello World',
 };
 
-class MyComponent extends Component {
-  constructor(props) {
-    super(props);
+class AppRoot extends Component {
+  constructor() {
+    super();
     this.state = {};
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <Text>Im the { this.props.text } component</Text>
+        <Home />
       </View>
     );
   }
 }
 
-MyComponent.propTypes = propTypes;
-MyComponent.defaultProps = defaultProps;
+AppRoot.propTypes = propTypes;
+AppRoot.defaultProps = defaultProps;
 
 const stateToProps = state => ({
   someProp: state.someProp,
@@ -49,4 +50,4 @@ const dispatchToProps = dispatch => bindActionCreators({
 }, dispatch);
 
 
-export default connect(stateToProps, dispatchToProps)(MyComponent);
+export default connect(stateToProps, dispatchToProps)(AppRoot);
