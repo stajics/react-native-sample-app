@@ -5,9 +5,9 @@ import {
   StyleSheet,
 } from 'react-native';
 import { connect } from 'react-redux';
-// import { bindActionCreators } from 'redux';
+
 // actions
-import { setTitleBasicActionCreator } from './actions';
+import { setTitle } from './actions';
 
 const styles = StyleSheet.create({
   container: {
@@ -52,14 +52,4 @@ const stateToProps = state => ({
   title: state.home.title,
 });
 
-// const dispatchToProps = dispatch => bindActionCreators({
-//   setTitle,
-// }, dispatch);
-
-// const dispatchToProps = dispatch => ({
-//   setTitle(title) {
-//     dispatch(setTitleBasicActionCreator(title));
-//   },
-// });
-
-export default connect(stateToProps, { setTitle: setTitleBasicActionCreator })(Home);
+export default connect(stateToProps, { setTitle })(Home);
