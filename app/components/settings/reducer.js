@@ -1,6 +1,6 @@
-import { Record as record } from 'immutable';
+import { Record } from 'immutable';
 
-const InitialState = record({
+const InitialState = Record({
   title: 'Settings Initial Title',
 });
 
