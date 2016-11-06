@@ -1,11 +1,11 @@
 export const setTitle = title => dispatch =>
   dispatch({
-    type: 'SET_TITLE',
+    type: 'SET_HOME_TITLE',
     title,
   });
 
 export const setTitleBasicActionCreator = title =>
   ({
-    type: 'SET_TITLE',
+    type: 'SET_HOME_TITLE',
     title,
   });

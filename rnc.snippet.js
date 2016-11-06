@@ -5,7 +5,6 @@ import {
   StyleSheet,
 } from 'react-native';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 
 const styles = StyleSheet.create({
   container: {
@@ -44,9 +43,4 @@ const stateToProps = state => ({
   someProp: state.someProp,
 });
 
-const dispatchToProps = dispatch => bindActionCreators({
-  // someAction,
-}, dispatch);
-
-
-export default connect(stateToProps, dispatchToProps)(MyComponent);
+export default connect(stateToProps, {/* someAction, someAction*/})(MyComponent);
