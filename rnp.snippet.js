@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import {
   View,
   Text,
   StyleSheet,
 } from 'react-native';
+
+const propTypes = {
+  title: PropTypes.string,
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -11,10 +15,12 @@ const styles = StyleSheet.create({
   },
 });
 
-const MyComponent = () => (
+const MyComponent = ({ title }) => (
   <View style={styles.container}>
-    <Text>Im MyComponent</Text>
+    <Text>Im MyComponent { title }</Text>
   </View>
 );
+
+MyComponent.propTypes = propTypes;
 
 export default MyComponent;

@@ -1,30 +1,28 @@
 import React, { PropTypes } from 'react';
-import { Text } from 'react-native';
 import { connect } from 'react-redux';
 import { Scene, Router } from 'react-native-router-flux';
 // components
-import Home from './components/home/Home.react';
-import Profile from './components/profile/Profile.react';
-import Settings from './components/settings/Settings.react';
+import Authentication from './containers/authentication/Authentication.react';
+import Home from './containers/home/Home.react';
+import Profile from './containers/profile/Profile.react';
+import Settings from './containers/settings/Settings.react';
+import SplashScreen from './containers/splashscreen/SplashScreen.react';
+import TabIcon from './components/TabIcon.react';
 
 const RouterWithRedux = connect()(Router);
-
-// Simple component to render something in place of icon
-const TabIcon = ({ selected, title }) => (
-  <Text style={{ color: selected ? 'red' : 'black' }}>{title}</Text>
-);
-
-TabIcon.propTypes = {
-  selected: PropTypes.bool,
-  title: PropTypes.string,
+// const AuthRouterWithRedux = connect()(Router);
+const propTypes = {
+  isLoggedIn: PropTypes.bool,
 };
 
 const AppRoot = () => (
   <RouterWithRedux>
     <Scene key="root">
-      {/* Tab Container */}
+      {/* SplashScreen */}
+      <Scene key="splash" title="SplashScreen" component={SplashScreen} hideNavBar initial />
+      {/* TabBar Container */}
       <Scene
-        key="tabbar"
+        key="rootTabbar"
         tabs
         tabBarStyle={{ backgroundColor: '#FFFFFF' }}
       >
@@ -40,8 +38,18 @@ const AppRoot = () => (
           <Scene key="profileSettings" title="Settings" component={Settings} />
         </Scene>
       </Scene>
+      {/* Authentication */}
+      <Scene key="auth">
+        <Scene key="authentication" title="Authentication" component={Authentication} />
+      </Scene>
     </Scene>
   </RouterWithRedux>
 );
 
-export default AppRoot;
+AppRoot.propTypes = propTypes;
+
+const stateToProps = state => ({
+  isLoggedIn: state.authentication.isLoggedIn,
+});
+
+export default connect(stateToProps, { })(AppRoot);

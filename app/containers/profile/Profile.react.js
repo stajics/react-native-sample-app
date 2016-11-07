@@ -6,9 +6,9 @@ import {
 } from 'react-native';
 import { connect } from 'react-redux';
 import { Actions } from 'react-native-router-flux';
-
 // actions
 import { setTitle } from './actions';
+import { logout as logoutAction } from '../authentication/actions';
 
 const styles = StyleSheet.create({
   container: {
@@ -21,6 +21,7 @@ const propTypes = {
   text: PropTypes.string.isRequired,
   title: PropTypes.string,
   setTitle: PropTypes.func,
+  logout: PropTypes.func,
 };
 
 const defaultProps = {
@@ -38,11 +39,12 @@ class Profile extends Component {
   }
 
   render() {
-    const { text, title } = this.props;
+    const { text, title, logout } = this.props;
     return (
       <View style={styles.container}>
         <Text onPress={this.onPress}>Im the {text} component with title {title}</Text>
         <Text onPress={Actions.profileSettings}>SETTINGS</Text>
+        <Text onPress={logout}>LOGOUT</Text>
       </View>
     );
   }
@@ -55,4 +57,4 @@ const stateToProps = state => ({
   title: state.profile.title,
 });
 
-export default connect(stateToProps, { setTitle })(Profile);
+export default connect(stateToProps, { setTitle, logout: logoutAction })(Profile);
