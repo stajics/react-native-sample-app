@@ -1,11 +1,10 @@
-import React from 'react-native';
-
+import { AsyncStorage } from 'react-native';
 import { apiEndpoint } from '../../urls';
 
 export const AUTH_API_CALL = 'Authenticated API Call';
 
 async function authenticatedApiCall(method, path, body, contentType = 'application/json') {
-  const token = await React.AsyncStorage.getItem('authToken') || null;
+  const token = await AsyncStorage.getItem('authToken') || null;
   if (!token) {
     throw new Error('No authentication token saved!');
   }

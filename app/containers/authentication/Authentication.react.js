@@ -6,11 +6,11 @@ import {
   AsyncStorage,
   ActivityIndicator,
 } from 'react-native';
-import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 import { Actions } from 'react-native-router-flux';
 // actions
-import { login as loginAction, getUser as getUserAction } from './actions';
+import { login as loginAction, fetchUser as fetchUserAction } from './actions';
 
 const styles = StyleSheet.create({
   container: {
@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
 
 const propTypes = {
   login: PropTypes.func,
-  getUser: PropTypes.func,
+  fetchUser: PropTypes.func,
   isLoginLoading: PropTypes.bool,
 };
 
@@ -37,11 +37,10 @@ class Authentication extends Component {
 
   async onPressLogin() {
     try {
-      const { login, getUser } = this.props;
+      const { login, fetchUser } = this.props;
       const response = await login('user1', 'pw');
       await AsyncStorage.setItem('authToken', response.payload.token);
-      const user = await getUser(response.payload.token);
-      await AsyncStorage.setItem('userId', `${user.payload[0].id}`);
+      await fetchUser(response.payload.token);
       Actions.rootTabbar();
     } catch (err) {
       // Handle error
@@ -72,7 +71,7 @@ const stateToProps = state => ({
 const dispatchToProps = dispatch => (
   bindActionCreators({
     login: loginAction,
-    getUser: getUserAction,
+    fetchUser: fetchUserAction,
   }, dispatch)
 );
 

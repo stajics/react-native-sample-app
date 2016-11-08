@@ -28,7 +28,7 @@ export default (state = initialState, action) => {
       return state.set('isLoading', { ...state.isLoading, fetchUser: true });
     case FETCH_USER_SUCCESS:
     case FETCH_USER_ERROR:
-      return state.set('isLoading', { ...state.isLoading, fetchUser: false });
+      return state.set('isLoading', { ...state.isLoading, fetchUser: false, login: false });
     default:
       return state;
   }

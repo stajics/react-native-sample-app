@@ -4,6 +4,7 @@ import {
   Text,
   StyleSheet,
 } from 'react-native';
+import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Actions } from 'react-native-router-flux';
 // actions
@@ -54,4 +55,10 @@ const stateToProps = state => ({
   title: state.home.title,
 });
 
-export default connect(stateToProps, { setTitle })(Home);
+const dispatchToProps = dispatch => (
+  bindActionCreators({
+    setTitle,
+  }, dispatch)
+);
+
+export default connect(stateToProps, dispatchToProps)(Home);

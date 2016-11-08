@@ -3,7 +3,9 @@ import {
   View,
   Text,
   StyleSheet,
+  AsyncStorage,
 } from 'react-native';
+import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Actions } from 'react-native-router-flux';
 // actions
@@ -32,19 +34,27 @@ class Profile extends Component {
   constructor(props) {
     super(props);
     this.onPress = this.onPress.bind(this);
+    this.onPressLogout = this.onPressLogout.bind(this);
   }
 
   onPress() {
     this.props.setTitle('New Profile Title');
   }
 
+  async onPressLogout() {
+    const { logout } = this.props;
+    logout();
+    await AsyncStorage.multiRemove(['authToken']);
+    Actions.auth();
+  }
+
   render() {
-    const { text, title, logout } = this.props;
+    const { text, title } = this.props;
     return (
       <View style={styles.container}>
         <Text onPress={this.onPress}>Im the {text} component with title {title}</Text>
         <Text onPress={Actions.profileSettings}>SETTINGS</Text>
-        <Text onPress={logout}>LOGOUT</Text>
+        <Text onPress={this.onPressLogout}>LOGOUT</Text>
       </View>
     );
   }
@@ -57,4 +67,11 @@ const stateToProps = state => ({
   title: state.profile.title,
 });
 
-export default connect(stateToProps, { setTitle, logout: logoutAction })(Profile);
+const dispatchToProps = dispatch => (
+  bindActionCreators({
+    setTitle,
+    logout: logoutAction,
+  }, dispatch)
+);
+
+export default connect(stateToProps, dispatchToProps)(Profile);

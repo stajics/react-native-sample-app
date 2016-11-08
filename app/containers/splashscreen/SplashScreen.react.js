@@ -4,11 +4,13 @@ import {
   Image,
   Text,
   StyleSheet,
+  AsyncStorage,
 } from 'react-native';
+import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Actions } from 'react-native-router-flux';
 // actions
-// import { setTitle } from './actions';
+import { fetchUser } from '../authentication/actions';
 
 const styles = StyleSheet.create({
   container: {
@@ -19,8 +21,8 @@ const styles = StyleSheet.create({
 });
 
 const propTypes = {
-  isLoggedIn: PropTypes.bool.isRequired,
   appTitle: PropTypes.string.isRequired,
+  fetchUser: PropTypes.func,
 };
 
 const defaultProps = {
@@ -29,12 +31,12 @@ const defaultProps = {
 
 class SplashScreen extends Component {
   componentDidMount() {
-    const { isLoggedIn } = this.props;
-    if (!isLoggedIn) {
-      setTimeout(() => { Actions.auth(); }, 500);
-    } else {
-      Actions.rootTabbar();
-    }
+    AsyncStorage.getItem('authToken').then((token) => {
+      if (!token) return Actions.auth();
+      return this.props.fetchUser(token).then(() => {
+        Actions.rootTabbar();
+      });
+    });
   }
 
   render() {
@@ -58,4 +60,10 @@ const stateToProps = state => ({
   isLoggedIn: state.authentication.isLoggedIn,
 });
 
-export default connect(stateToProps, {})(SplashScreen);
+const dispatchToProps = dispatch => (
+  bindActionCreators({
+    fetchUser,
+  }, dispatch)
+);
+
+export default connect(stateToProps, dispatchToProps)(SplashScreen);

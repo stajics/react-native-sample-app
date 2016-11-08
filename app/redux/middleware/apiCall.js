@@ -1,5 +1,4 @@
-import React from 'react-native';
-
+import { AsyncStorage } from 'react-native';
 import { apiEndpoint } from '../../urls';
 
 export const API_CALL = 'API Call';

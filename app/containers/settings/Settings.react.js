@@ -4,6 +4,7 @@ import {
   Text,
   StyleSheet,
 } from 'react-native';
+import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 // actions
 import { setTitle } from './actions';
@@ -52,4 +53,10 @@ const stateToProps = state => ({
   title: state.settings.title,
 });
 
-export default connect(stateToProps, { setTitle })(Settings);
+const dispatchToProps = dispatch => (
+  bindActionCreators({
+    setTitle,
+  }, dispatch)
+);
+
+export default connect(stateToProps, dispatchToProps)(Settings);

@@ -17,11 +17,11 @@ export const logout = () => dispatch =>
     type: 'LOGOUT_SUCCESS',
   });
 
-export const getUser = (id = 1) => dispatch =>
+export const fetchUser = (token = 1) => dispatch =>
   dispatch({
     [AUTH_API_CALL]: {
       method: 'GET',
-      path: `/users?token=${id}`,
+      path: `/users?token=${token}`,
       types: [actions.FETCH_USER_START, actions.FETCH_USER_SUCCESS, actions.FETCH_USER_ERROR],
     },
   });
