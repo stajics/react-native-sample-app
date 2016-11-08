@@ -4,8 +4,10 @@ import {
   Text,
   StyleSheet,
   AsyncStorage,
+  ActivityIndicator,
 } from 'react-native';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { Actions } from 'react-native-router-flux';
 // actions
 import { login as loginAction, getUser as getUserAction } from './actions';
@@ -18,11 +20,9 @@ const styles = StyleSheet.create({
 });
 
 const propTypes = {
-  text: PropTypes.string.isRequired,
-  title: PropTypes.string,
-  setTitle: PropTypes.func,
   login: PropTypes.func,
   getUser: PropTypes.func,
+  isLoginLoading: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -32,12 +32,7 @@ const defaultProps = {
 class Authentication extends Component {
   constructor(props) {
     super(props);
-    this.onPress = this.onPress.bind(this);
     this.onPressLogin = this.onPressLogin.bind(this);
-  }
-
-  onPress() {
-    this.props.setTitle('Authentication New Title');
   }
 
   async onPressLogin() {
@@ -54,11 +49,13 @@ class Authentication extends Component {
   }
 
   render() {
-    const { text, title } = this.props;
+    const { isLoginLoading } = this.props;
     return (
       <View style={styles.container}>
-        <Text onPress={this.onPress}>Im the {text} component with title {title}</Text>
-        <Text onPress={this.onPressLogin}>LOGIN</Text>
+        {
+          !isLoginLoading ? <Text onPress={this.onPressLogin}>LOGIN</Text>
+          : <ActivityIndicator />
+        }
       </View>
     );
   }
@@ -69,6 +66,14 @@ Authentication.defaultProps = defaultProps;
 
 const stateToProps = state => ({
   title: state.home.title,
+  isLoginLoading: state.flags.isLoading.login,
 });
 
-export default connect(stateToProps, { login: loginAction, getUser: getUserAction })(Authentication);
+const dispatchToProps = dispatch => (
+  bindActionCreators({
+    login: loginAction,
+    getUser: getUserAction,
+  }, dispatch)
+);
+
+export default connect(stateToProps, dispatchToProps)(Authentication);

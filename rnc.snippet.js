@@ -4,6 +4,7 @@ import {
   Text,
   StyleSheet,
 } from 'react-native';
+import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 const styles = StyleSheet.create({
@@ -43,4 +44,11 @@ const stateToProps = state => ({
   someProp: state.someProp,
 });
 
-export default connect(stateToProps, {/* someAction, someAction*/})(MyComponent);
+const dispatchToProps = dispatch => (
+  bindActionCreators({
+    // login: loginAction,
+   // getUser: getUserAction,
+  }, dispatch)
+);
+
+export default connect(stateToProps, dispatchToProps)(MyComponent);
