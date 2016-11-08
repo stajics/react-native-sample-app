@@ -31,7 +31,9 @@ class SplashScreen extends Component {
   componentDidMount() {
     const { isLoggedIn } = this.props;
     if (!isLoggedIn) {
-      setTimeout(() => { Actions.auth({ type: 'replace' }); }, 2000);
+      setTimeout(() => { Actions.auth(); }, 500);
+    } else {
+      Actions.rootTabbar();
     }
   }
 

@@ -1,0 +1,17 @@
+{
+  "name": "json-server-sample",
+  "version": "1.0.0",
+  "description": "Json server",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "json-server": "^0.8.23"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

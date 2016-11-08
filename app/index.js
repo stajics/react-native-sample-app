@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { UIManager, Platform } from 'react-native';
 // store
 import { Provider } from 'react-redux';
-import configureStore from './configureStore';
+import configureStore from './redux/configureStore';
 // components
 import AppRoot from './AppRoot.react';
 
