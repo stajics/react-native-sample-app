@@ -1,42 +1,16 @@
 import { AUTH_API_CALL } from '../../redux/middleware/authenticatedApiCall';
+import { API_CALL } from '../../redux/middleware/apiCall';
 import * as actions from './constants';
-import { apiEndpoint } from '../../urls';
 
-export const login = (username, password) => (dispatch) => {
+export const login = (username, password) => dispatch =>
   dispatch({
-    type: actions.LOGIN_START,
+    [API_CALL]: {
+      method: 'POST',
+      path: '/login',
+      types: [actions.LOGIN_START, actions.LOGIN_SUCCESS, actions.LOGIN_ERROR],
+      body: JSON.stringify({ username, password }),
+    },
   });
-  return fetch(`${apiEndpoint}/login`, {
-    method: 'POST',
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ username, password }),
-  })
-  .then((response) => {
-    if (response.status >= 400) {
-      return response.json().then((data) => { throw data; });
-    }
-    return response.json();
-  })
-  .then(
-    (data) => {
-      dispatch({
-        type: actions.LOGIN_SUCCESS,
-        response: data,
-      });
-      return { status: 200, body: data };
-    },
-    (error) => {
-      dispatch({
-        type: actions.LOGIN_ERROR,
-        error,
-      });
-      return { status: 400, body: error };
-    }
-  );
-};
 
 export const logout = () => dispatch =>
   dispatch({

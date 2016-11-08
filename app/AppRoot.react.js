@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { BackAndroid } from 'react-native';
 import { connect } from 'react-redux';
 import { Scene, Router, Actions } from 'react-native-router-flux';
@@ -12,9 +12,9 @@ import TabIcon from './components/TabIcon.react';
 
 const RouterWithRedux = connect()(Router);
 
-const propTypes = {
-  isLoggedIn: PropTypes.bool,
-};
+// const propTypes = {
+//   isLoggedIn: PropTypes.bool,
+// };
 
 class AppRoot extends Component {
   constructor(props) {
@@ -64,10 +64,11 @@ class AppRoot extends Component {
   }
 }
 
-AppRoot.propTypes = propTypes;
+// AppRoot.propTypes = propTypes;
 
-const stateToProps = state => ({
-  isLoggedIn: state.authentication.isLoggedIn,
-});
+// const stateToProps = state => ({
+//   isLoggedIn: state.authentication.isLoggedIn,
+// });
 
-export default connect(stateToProps, { })(AppRoot);
+// export default connect(stateToProps, { })(AppRoot);
+export default AppRoot;

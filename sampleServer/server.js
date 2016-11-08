@@ -5,8 +5,11 @@ const bodyParser = require('body-parser');
 const server = jsonServer.create();
 const router = jsonServer.router('db.json');
 const middlewares = jsonServer.defaults();
+/* eslint no-console: "off" */
 
 server.use(bodyParser.json());
+
+// Login api call
 server.post('/login', (req, res) => {
   const { username, password } = req.body;
   if (username === 'user1' && password === 'pw') {
@@ -14,12 +17,18 @@ server.post('/login', (req, res) => {
     return res.json({ token: 'asdf' });
   }
   res.status(400);
-  return res.json({ error: 'Bad crredentials.' });
+  return res.json({ error: 'Bad credentials.' });
 });
+
+// All calls except login need Authorization
 server.use((req, res, next) => {
-  console.log(req.get('Authorization'));
-  next();
+  if (req.get('Authorization') === 'asdf' || req.get('Authorization') === 'qwer') {
+    return next();
+  }
+  res.status(401);
+  return res.json({ error: 'Unauthorized.' });
 });
+
 server.use(middlewares);
 server.use(router);
 server.listen(3000, () => {

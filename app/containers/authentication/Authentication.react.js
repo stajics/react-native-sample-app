@@ -44,16 +44,12 @@ class Authentication extends Component {
     try {
       const { login, getUser } = this.props;
       const response = await login('user1', 'pw');
-      if (response.status >= 200 && response.status < 300) {
-        await AsyncStorage.setItem('authToken', response.body.token);
-        const user = await getUser(response.body.token);
-        await AsyncStorage.setItem('userId', user.response.id);
-        Actions.rootTabbar();
-      } else {
-        throw new Error('Something went wrong.');
-      }
+      await AsyncStorage.setItem('authToken', response.payload.token);
+      const user = await getUser(response.payload.token);
+      await AsyncStorage.setItem('userId', `${user.payload[0].id}`);
+      Actions.rootTabbar();
     } catch (err) {
-    // TODO Handle error
+      // Handle error
     }
   }
 
