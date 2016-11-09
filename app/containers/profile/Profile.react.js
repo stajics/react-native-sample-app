@@ -45,7 +45,7 @@ class Profile extends Component {
     const { logout } = this.props;
     logout();
     await AsyncStorage.multiRemove(['authToken']);
-    Actions.auth();
+    Actions.authentication();
   }
 
   render() {

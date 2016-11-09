@@ -1,14 +1,8 @@
 import React, { Component } from 'react';
-import { BackAndroid } from 'react-native';
+import { BackAndroid, View, TextInput } from 'react-native';
 import { connect } from 'react-redux';
-import { Scene, Router, Actions } from 'react-native-router-flux';
-// components
-import Authentication from './containers/authentication/Authentication.react';
-import Home from './containers/home/Home.react';
-import Profile from './containers/profile/Profile.react';
-import Settings from './containers/settings/Settings.react';
-import SplashScreen from './containers/splashscreen/SplashScreen.react';
-import TabIcon from './components/TabIcon.react';
+import { Router, Actions } from 'react-native-router-flux';
+import scenes from './scenes';
 
 const RouterWithRedux = connect()(Router);
 
@@ -24,42 +18,17 @@ class AppRoot extends Component {
 
   render() {
     return (
-      <RouterWithRedux>
-        <Scene key="root">
-          {/* SplashScreen */}
-          <Scene
-            key="splash" type="reset"
-            title="SplashScreen"
-            component={SplashScreen}
-            hideNavBar
-            initial
-          />
-          {/* TabBar Container */}
-          <Scene
-            key="rootTabbar"
-            type="reset"
-            duration={0}
-            tabs
-            tabBarStyle={{ backgroundColor: '#FFFFFF' }}
-          >
-            {/* Tab and it's scenes */}
-            <Scene key="homeTab" title="Home" icon={TabIcon}>
-              <Scene key="home" title="Home" component={Home} initial />
-              <Scene key="homeSettings" title="Settings" component={Settings} />
-            </Scene>
-
-            {/* Tab and it's scenes */}
-            <Scene key="profileTab" title="Profile" icon={TabIcon}>
-              <Scene key="profile" title="Profile" component={Profile} initial />
-              <Scene key="profileSettings" title="Settings" component={Settings} />
-            </Scene>
-          </Scene>
-          {/* Authentication */}
-          <Scene key="auth" type="reset">
-            <Scene key="authentication" title="Authentication" component={Authentication} />
-          </Scene>
-        </Scene>
-      </RouterWithRedux>
+      <View // For correctly hiding and showing keyboard
+        style={{ flex: 1 }}
+        onStartShouldSetResponderCapture={(e) => {
+          const focusField = TextInput.State.currentlyFocusedField();
+          if (focusField != null && e.nativeEvent.target !== focusField) {
+            TextInput.State.blurTextInput(TextInput.State.currentlyFocusedField());
+          }
+        }}
+      >
+        <RouterWithRedux scenes={scenes} />
+      </View>
     );
   }
 }

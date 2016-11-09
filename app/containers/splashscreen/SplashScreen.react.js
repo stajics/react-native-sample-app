@@ -18,6 +18,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  logoImage: {
+    width: 200,
+    height: 200,
+  }
 });
 
 const propTypes = {
@@ -32,7 +36,7 @@ const defaultProps = {
 class SplashScreen extends Component {
   componentDidMount() {
     AsyncStorage.getItem('authToken').then((token) => {
-      if (!token) return Actions.auth();
+      if (!token) return Actions.authentication();
       return this.props.fetchUser(token).then(() => {
         Actions.rootTabbar();
       });
@@ -45,7 +49,7 @@ class SplashScreen extends Component {
       <View style={styles.container}>
         <Text>{appTitle}</Text>
         <Image
-          style={{ width: 200, height: 200 }}
+          style={styles.logoImage}
           source={{ uri: 'http://image.flaticon.com/teams/new/1-freepik.jpg' }}
         />
       </View>

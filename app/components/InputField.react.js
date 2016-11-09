@@ -46,6 +46,9 @@ const InputField = ({ containerStyle, textInputStyle, width, height, ...otherPro
         styles.container]}
     >
       <TextInput
+        underlineColorAndroid="transparent"
+        autoCapitalize="none"
+        autoCorrect={false}
         {...otherProps}
         style={[styles.defaultColor, dimensions, textInputStyle, styles.textInput]}
       />
