@@ -4,6 +4,7 @@ import {
   Text,
   StyleSheet,
   AsyncStorage,
+  TouchableOpacity,
 } from 'react-native';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -16,6 +17,23 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     marginTop: 50,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  buttonContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 50,
+    width: 120,
+    height: 35,
+    borderColor: 'black',
+    borderWidth: 1,
+  },
+  logoutButtonText: {
+    fontSize: 30,
+  },
+  settingsButtonText: {
+    fontSize: 20,
   },
 });
 
@@ -53,8 +71,16 @@ class Profile extends Component {
     return (
       <View style={styles.container}>
         <Text onPress={this.onPress}>Im the {text} component with title {title}</Text>
-        <Text onPress={Actions.profileSettings}>SETTINGS</Text>
-        <Text onPress={this.onPressLogout}>LOGOUT</Text>
+        <TouchableOpacity onPress={Actions.profileSettings}>
+          <View style={styles.buttonContainer}>
+            <Text style={styles.settingsButtonText} >SETTINGS</Text>
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={this.onPressLogout}>
+          <View style={styles.buttonContainer}>
+            <Text style={styles.logoutButtonText} >LOGOUT</Text>
+          </View>
+        </TouchableOpacity>
       </View>
     );
   }

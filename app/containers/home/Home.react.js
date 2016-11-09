@@ -3,6 +3,7 @@ import {
   View,
   Text,
   StyleSheet,
+  TouchableOpacity,
 } from 'react-native';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -14,6 +15,20 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     marginTop: 50,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  settingsButtonText: {
+    fontSize: 20,
+  },
+  buttonContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 50,
+    width: 120,
+    height: 35,
+    borderColor: 'black',
+    borderWidth: 1,
   },
 });
 
@@ -42,7 +57,11 @@ class Home extends Component {
     return (
       <View style={styles.container}>
         <Text onPress={this.onPress}>Im the {text} component with title {title}</Text>
-        <Text onPress={Actions.homeSettings}>SETTINGS</Text>
+        <TouchableOpacity onPress={Actions.homeSettings}>
+          <View style={styles.buttonContainer}>
+            <Text style={styles.settingsButtonText}>SETTINGS</Text>
+          </View>
+        </TouchableOpacity>
       </View>
     );
   }

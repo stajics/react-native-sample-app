@@ -21,7 +21,11 @@ const styles = StyleSheet.create({
   logoImage: {
     width: 200,
     height: 200,
-  }
+  },
+  titleText: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
 });
 
 const propTypes = {
@@ -47,7 +51,7 @@ class SplashScreen extends Component {
     const { appTitle } = this.props;
     return (
       <View style={styles.container}>
-        <Text>{appTitle}</Text>
+        <Text style={styles.titleText}>{appTitle}</Text>
         <Image
           style={styles.logoImage}
           source={{ uri: 'http://image.flaticon.com/teams/new/1-freepik.jpg' }}

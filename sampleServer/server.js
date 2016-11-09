@@ -8,11 +8,14 @@ const middlewares = jsonServer.defaults();
 /* eslint no-console: "off" */
 
 server.use(bodyParser.json());
-
+// delay middleware
+server.use((req, res, next) => {
+  setTimeout(() => { next(); }, 1000);
+});
 // Login api call
 server.post('/login', (req, res) => {
   const { username, password } = req.body;
-  if (username === 'user1' && password === 'pw') {
+  if (username === 'user' && password === 'password') {
     res.status(200);
     return res.json({ token: 'asdf' });
   }

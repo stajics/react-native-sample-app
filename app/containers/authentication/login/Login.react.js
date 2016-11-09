@@ -6,6 +6,7 @@ import {
   AsyncStorage,
   ActivityIndicator,
   LayoutAnimation,
+  TouchableOpacity,
 } from 'react-native';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -31,7 +32,7 @@ const styles = StyleSheet.create({
     borderColor: 'black',
     borderWidth: 1,
   },
-  loginButton: {
+  loginButtonText: {
     fontSize: 30,
   },
   errorMessageContainer: {
@@ -103,13 +104,15 @@ class Login extends Component {
             password: event.nativeEvent.text,
           })}
         />
-        <View style={styles.loginButtonContainer}>
-          {
-            !isLoginLoading
-            ? <Text style={styles.loginButton} onPress={this.onPressLogin}>LOGIN</Text>
-            : <ActivityIndicator style={{ alignItems: 'center', justifyContent: 'center' }} />
-          }
-        </View>
+        <TouchableOpacity onPress={this.onPressLogin}>
+          <View style={styles.loginButtonContainer}>
+            {
+              !isLoginLoading
+              ? <Text style={styles.loginButtonText}>LOGIN</Text>
+              : <ActivityIndicator style={{ alignItems: 'center', justifyContent: 'center' }} />
+            }
+          </View>
+        </TouchableOpacity>
         <View style={styles.errorMessageContainer}>
           {
             isLoginError ? <Text style={styles.errorMessageText}>BAD CREDENTIALS</Text>

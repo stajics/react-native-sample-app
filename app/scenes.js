@@ -24,7 +24,7 @@ const scenes = Actions.create(
       type="reset"
       duration={0}
       tabs
-      tabBarStyle={{ backgroundColor: '#FFFFFF' }}
+      tabBarStyle={{ backgroundColor: '#F1F1F1' }}
     >
       {/* Tab and it's scenes */}
       <Scene key="homeTab" title="Home" icon={TabIcon}>
