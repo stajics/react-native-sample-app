@@ -18,11 +18,13 @@ export default (state = initialState, action) => {
   switch (action.type) {
     // LOGIN
     case LOGIN_START:
-      return state.set('isLoading', { ...state.isLoading, login: true });
+      return state.set('isLoading', { ...state.isLoading, login: true })
+        .set('error', { ...state.error, login: null });
     case LOGIN_SUCCESS:
-    case LOGIN_ERROR:
       return state.set('isLoading', { ...state.isLoading, login: true });
-
+    case LOGIN_ERROR:
+      return state.set('isLoading', { ...state.isLoading, login: false })
+        .set('error', { ...state.error, login: action.payload });
     // GET_USER
     case FETCH_USER_START:
       return state.set('isLoading', { ...state.isLoading, fetchUser: true });
