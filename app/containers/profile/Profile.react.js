@@ -4,7 +4,6 @@ import {
   Text,
   StyleSheet,
   AsyncStorage,
-  TouchableOpacity,
 } from 'react-native';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -12,6 +11,8 @@ import { Actions } from 'react-native-router-flux';
 // actions
 import { setTitle } from './actions';
 import { logout as logoutAction } from '../authentication/actions';
+// components
+import Button from '../../components/Button.react';
 
 const styles = StyleSheet.create({
   container: {
@@ -71,16 +72,18 @@ class Profile extends Component {
     return (
       <View style={styles.container}>
         <Text onPress={this.onPress}>Im the {text} component with title {title}</Text>
-        <TouchableOpacity onPress={Actions.profileSettings}>
-          <View style={styles.buttonContainer}>
-            <Text style={styles.settingsButtonText} >SETTINGS</Text>
-          </View>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={this.onPressLogout}>
-          <View style={styles.buttonContainer}>
-            <Text style={styles.logoutButtonText} >LOGOUT</Text>
-          </View>
-        </TouchableOpacity>
+        <Button
+          text={'SETTINGS'}
+          onPress={Actions.profileSettings}
+          buttonContainerStyle={styles.buttonContainer}
+          buttonTextStyle={styles.settingsButtonText}
+        />
+        <Button
+          text={'LOGOUT'}
+          onPress={this.onPressLogout}
+          buttonContainerStyle={styles.buttonContainer}
+          buttonTextStyle={styles.settingsButtonText}
+        />
       </View>
     );
   }

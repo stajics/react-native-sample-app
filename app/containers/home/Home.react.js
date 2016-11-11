@@ -3,13 +3,14 @@ import {
   View,
   Text,
   StyleSheet,
-  TouchableOpacity,
 } from 'react-native';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Actions } from 'react-native-router-flux';
 // actions
 import { setTitle } from './actions';
+// components
+import Button from '../../components/Button.react';
 
 const styles = StyleSheet.create({
   container: {
@@ -57,11 +58,12 @@ class Home extends Component {
     return (
       <View style={styles.container}>
         <Text onPress={this.onPress}>Im the {text} component with title {title}</Text>
-        <TouchableOpacity onPress={Actions.homeSettings}>
-          <View style={styles.buttonContainer}>
-            <Text style={styles.settingsButtonText}>SETTINGS</Text>
-          </View>
-        </TouchableOpacity>
+        <Button
+          text={'SETTINGS'}
+          onPress={Actions.homeSettings}
+          buttonContainerStyle={styles.buttonContainer}
+          buttonTextStyle={styles.settingsButtonText}
+        />
       </View>
     );
   }

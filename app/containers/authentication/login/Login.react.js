@@ -4,9 +4,7 @@ import {
   Text,
   StyleSheet,
   AsyncStorage,
-  ActivityIndicator,
   LayoutAnimation,
-  TouchableOpacity,
 } from 'react-native';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -15,6 +13,7 @@ import { Actions } from 'react-native-router-flux';
 import { login as loginAction, fetchUser as fetchUserAction } from '../actions';
 // components
 import InputField from '../../../components/InputField.react';
+import Button from '../../../components/Button.react';
 
 const styles = StyleSheet.create({
   container: {
@@ -104,15 +103,13 @@ class Login extends Component {
             password: event.nativeEvent.text,
           })}
         />
-        <TouchableOpacity onPress={this.onPressLogin}>
-          <View style={styles.loginButtonContainer}>
-            {
-              !isLoginLoading
-              ? <Text style={styles.loginButtonText}>LOGIN</Text>
-              : <ActivityIndicator style={{ alignItems: 'center', justifyContent: 'center' }} />
-            }
-          </View>
-        </TouchableOpacity>
+        <Button
+          text={'LOGIN'}
+          onPress={this.onPressLogin}
+          isLoading={isLoginLoading}
+          buttonContainerStyle={styles.loginButtonContainer}
+          buttonTextStyle={styles.loginButtonText}
+        />
         <View style={styles.errorMessageContainer}>
           {
             isLoginError ? <Text style={styles.errorMessageText}>BAD CREDENTIALS</Text>
