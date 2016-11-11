@@ -10,8 +10,8 @@ import rootReducer from './rootReducer';
 const logger = createLogger();
 const middleware = [thunk, apiCall, authenticatedApiCall, logger];
 
-const configureStore = () => {
-  const store = compose(applyMiddleware(...middleware))(createStore)(rootReducer);
+const configureStore = (initialState = undefined) => {
+  const store = compose(applyMiddleware(...middleware))(createStore)(rootReducer, initialState);
   return store;
 };
 

@@ -11,6 +11,13 @@
       "new-cap": "off"
     },
     "globals": {
+        "fetch": true,
+        "it": true,
+        "expect": true,
+        "jest": true,
+        "fetch": true,
+        "fetch": true,
+        "fetch": true,
         "fetch": true
     }
 }

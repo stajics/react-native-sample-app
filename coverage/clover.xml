@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1478905535287" clover="3.2.0">
+  <project timestamp="1478905535287" name="All files">
+    <metrics statements="210" coveredstatements="138" conditionals="60" coveredconditionals="29" methods="74" coveredmethods="32" elements="344" coveredelements="199" complexity="0" loc="210" ncloc="210" packages="11" files="27" classes="27">
+      <package name="app">
+        <metrics statements="15" coveredstatements="11" conditionals="6" coveredconditionals="1" methods="6" coveredmethods="4"/>
+        <file name="AppRoot.react.js" path="d:\development\js\react-native\react-native-sample-app\app\AppRoot.react.js">
+          <metrics statements="7" coveredstatements="4" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="2"/>
+          <line num="7" count="2" type="stmt"/>
+          <line num="15" count="2" type="stmt"/>
+          <line num="16" count="2" type="stmt"/>
+          <line num="20" count="2" type="stmt"/>
+          <line num="24" count="0" type="stmt"/>
+          <line num="25" count="0" type="stmt"/>
+          <line num="26" count="0" type="stmt"/>
+        </file>
+        <file name="index.js" path="d:\development\js\react-native\react-native-sample-app\app\index.js">
+          <metrics statements="5" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="13" count="1" type="stmt"/>
+          <line num="14" count="1" type="stmt"/>
+          <line num="15" count="0" type="stmt"/>
+          <line num="20" count="1" type="stmt"/>
+        </file>
+        <file name="scenes.js" path="d:\development\js\react-native\react-native-sample-app\app\scenes.js">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="11" count="2" type="stmt"/>
+        </file>
+        <file name="urls.js" path="d:\development\js\react-native\react-native-sample-app\app\urls.js">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="5" type="stmt"/>
+          <line num="2" count="5" type="stmt"/>
+        </file>
+      </package>
+      <package name="app.components">
+        <metrics statements="16" coveredstatements="16" conditionals="10" coveredconditionals="10" methods="3" coveredmethods="3"/>
+        <file name="Button.react.js" path="d:\development\js\react-native\react-native-sample-app\app\components\Button.react.js">
+          <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+          <line num="10" count="6" type="stmt"/>
+          <line num="18" count="6" type="stmt"/>
+          <line num="33" count="6" type="stmt"/>
+          <line num="34" count="8" type="stmt"/>
+          <line num="45" count="6" type="stmt"/>
+        </file>
+        <file name="InputField.react.js" path="d:\development\js\react-native\react-native-sample-app\app\components\InputField.react.js">
+          <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+          <line num="6" count="4" type="stmt"/>
+          <line num="13" count="4" type="stmt"/>
+          <line num="39" count="4" type="stmt"/>
+          <line num="40" count="8" type="stmt"/>
+          <line num="41" count="8" type="stmt"/>
+          <line num="59" count="4" type="stmt"/>
+        </file>
+        <file name="TabIcon.react.js" path="d:\development\js\react-native\react-native-sample-app\app\components\TabIcon.react.js">
+          <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+          <line num="8" count="3" type="stmt"/>
+          <line num="13" count="3" type="stmt"/>
+          <line num="25" count="3" type="stmt"/>
+          <line num="26" count="2" type="stmt"/>
+          <line num="31" count="3" type="stmt"/>
+        </file>
+      </package>
+      <package name="app.containers.authentication">
+        <metrics statements="16" coveredstatements="13" conditionals="3" coveredconditionals="2" methods="7" coveredmethods="1"/>
+        <file name="actions.js" path="d:\development\js\react-native\react-native-sample-app\app\containers\authentication\actions.js">
+          <metrics statements="6" coveredstatements="3" conditionals="1" coveredconditionals="0" methods="6" coveredmethods="0"/>
+          <line num="5" count="5" type="stmt"/>
+          <line num="6" count="0" type="stmt"/>
+          <line num="15" count="5" type="stmt"/>
+          <line num="16" count="0" type="stmt"/>
+          <line num="20" count="5" type="stmt"/>
+          <line num="21" count="0" type="stmt"/>
+        </file>
+        <file name="constants.js" path="d:\development\js\react-native\react-native-sample-app\app\containers\authentication\constants.js">
+          <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="5" type="stmt"/>
+          <line num="2" count="5" type="stmt"/>
+          <line num="3" count="5" type="stmt"/>
+          <line num="5" count="5" type="stmt"/>
+          <line num="6" count="5" type="stmt"/>
+          <line num="7" count="5" type="stmt"/>
+        </file>
+        <file name="reducer.js" path="d:\development\js\react-native\react-native-sample-app\app\containers\authentication\reducer.js">
+          <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="6" count="2" type="stmt"/>
+          <line num="9" count="8" type="stmt"/>
+          <line num="11" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="app.containers.authentication.login">
+        <metrics statements="23" coveredstatements="12" conditionals="2" coveredconditionals="2" methods="8" coveredmethods="2"/>
+        <file name="Login.react.js" path="d:\development\js\react-native\react-native-sample-app\app\containers\authentication\login\Login.react.js">
+          <metrics statements="23" coveredstatements="12" conditionals="2" coveredconditionals="2" methods="8" coveredmethods="2"/>
+          <line num="18" count="3" type="stmt"/>
+          <line num="53" count="3" type="stmt"/>
+          <line num="60" count="3" type="stmt"/>
+          <line num="66" count="3" type="stmt"/>
+          <line num="67" count="3" type="stmt"/>
+          <line num="68" count="3" type="stmt"/>
+          <line num="72" count="0" type="stmt"/>
+          <line num="76" count="0" type="stmt"/>
+          <line num="77" count="0" type="stmt"/>
+          <line num="78" count="0" type="stmt"/>
+          <line num="79" count="0" type="stmt"/>
+          <line num="80" count="0" type="stmt"/>
+          <line num="81" count="0" type="stmt"/>
+          <line num="82" count="0" type="stmt"/>
+          <line num="89" count="3" type="stmt"/>
+          <line num="90" count="3" type="stmt"/>
+          <line num="95" count="0" type="stmt"/>
+          <line num="102" count="0" type="stmt"/>
+          <line num="124" count="3" type="stmt"/>
+          <line num="125" count="3" type="stmt"/>
+          <line num="127" count="3" type="stmt"/>
+          <line num="133" count="3" type="stmt"/>
+          <line num="134" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="app.containers.home">
+        <metrics statements="22" coveredstatements="17" conditionals="3" coveredconditionals="2" methods="9" coveredmethods="3"/>
+        <file name="Home.react.js" path="d:\development\js\react-native\react-native-sample-app\app\containers\home\Home.react.js">
+          <metrics statements="13" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="2"/>
+          <line num="15" count="3" type="stmt"/>
+          <line num="36" count="3" type="stmt"/>
+          <line num="42" count="3" type="stmt"/>
+          <line num="48" count="1" type="stmt"/>
+          <line num="49" count="1" type="stmt"/>
+          <line num="53" count="0" type="stmt"/>
+          <line num="57" count="1" type="stmt"/>
+          <line num="58" count="1" type="stmt"/>
+          <line num="72" count="3" type="stmt"/>
+          <line num="73" count="3" type="stmt"/>
+          <line num="75" count="3" type="stmt"/>
+          <line num="79" count="3" type="stmt"/>
+          <line num="80" count="0" type="stmt"/>
+        </file>
+        <file name="actions.js" path="d:\development\js\react-native\react-native-sample-app\app\containers\home\actions.js">
+          <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+          <line num="1" count="3" type="stmt"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="7" count="3" type="stmt"/>
+          <line num="8" count="0" type="stmt"/>
+        </file>
+        <file name="reducer.js" path="d:\development\js\react-native\react-native-sample-app\app\containers\home\reducer.js">
+          <metrics statements="5" coveredstatements="4" conditionals="3" coveredconditionals="2" methods="1" coveredmethods="1"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="7" count="2" type="stmt"/>
+          <line num="10" count="8" type="stmt"/>
+          <line num="12" count="0" type="stmt"/>
+          <line num="14" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="app.containers.profile">
+        <metrics statements="28" coveredstatements="18" conditionals="4" coveredconditionals="2" methods="10" coveredmethods="3"/>
+        <file name="Profile.react.js" path="d:\development\js\react-native\react-native-sample-app\app\containers\profile\Profile.react.js">
+          <metrics statements="18" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="2"/>
+          <line num="17" count="3" type="stmt"/>
+          <line num="41" count="3" type="stmt"/>
+          <line num="48" count="3" type="stmt"/>
+          <line num="54" count="1" type="stmt"/>
+          <line num="55" count="1" type="stmt"/>
+          <line num="56" count="1" type="stmt"/>
+          <line num="60" count="0" type="stmt"/>
+          <line num="64" count="0" type="stmt"/>
+          <line num="65" count="0" type="stmt"/>
+          <line num="66" count="0" type="stmt"/>
+          <line num="67" count="0" type="stmt"/>
+          <line num="71" count="1" type="stmt"/>
+          <line num="72" count="1" type="stmt"/>
+          <line num="92" count="3" type="stmt"/>
+          <line num="93" count="3" type="stmt"/>
+          <line num="95" count="3" type="stmt"/>
+          <line num="99" count="3" type="stmt"/>
+          <line num="100" count="0" type="stmt"/>
+        </file>
+        <file name="actions.js" path="d:\development\js\react-native\react-native-sample-app\app\containers\profile\actions.js">
+          <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+          <line num="1" count="3" type="stmt"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="7" count="3" type="stmt"/>
+          <line num="8" count="0" type="stmt"/>
+        </file>
+        <file name="reducer.js" path="d:\development\js\react-native\react-native-sample-app\app\containers\profile\reducer.js">
+          <metrics statements="6" coveredstatements="4" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
+          <line num="4" count="2" type="stmt"/>
+          <line num="10" count="2" type="stmt"/>
+          <line num="13" count="8" type="stmt"/>
+          <line num="15" count="0" type="stmt"/>
+          <line num="17" count="0" type="stmt"/>
+          <line num="19" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="app.containers.settings">
+        <metrics statements="22" coveredstatements="17" conditionals="3" coveredconditionals="2" methods="9" coveredmethods="3"/>
+        <file name="Settings.react.js" path="d:\development\js\react-native\react-native-sample-app\app\containers\settings\Settings.react.js">
+          <metrics statements="13" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="2"/>
+          <line num="12" count="3" type="stmt"/>
+          <line num="21" count="3" type="stmt"/>
+          <line num="27" count="3" type="stmt"/>
+          <line num="33" count="1" type="stmt"/>
+          <line num="34" count="1" type="stmt"/>
+          <line num="38" count="0" type="stmt"/>
+          <line num="42" count="1" type="stmt"/>
+          <line num="43" count="1" type="stmt"/>
+          <line num="51" count="3" type="stmt"/>
+          <line num="52" count="3" type="stmt"/>
+          <line num="54" count="3" type="stmt"/>
+          <line num="58" count="3" type="stmt"/>
+          <line num="59" count="0" type="stmt"/>
+        </file>
+        <file name="actions.js" path="d:\development\js\react-native\react-native-sample-app\app\containers\settings\actions.js">
+          <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+          <line num="1" count="3" type="stmt"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="7" count="3" type="stmt"/>
+          <line num="8" count="0" type="stmt"/>
+        </file>
+        <file name="reducer.js" path="d:\development\js\react-native\react-native-sample-app\app\containers\settings\reducer.js">
+          <metrics statements="5" coveredstatements="4" conditionals="3" coveredconditionals="2" methods="1" coveredmethods="1"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="7" count="2" type="stmt"/>
+          <line num="10" count="8" type="stmt"/>
+          <line num="12" count="0" type="stmt"/>
+          <line num="14" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="app.containers.splashscreen">
+        <metrics statements="15" coveredstatements="11" conditionals="2" coveredconditionals="0" methods="7" coveredmethods="4"/>
+        <file name="SplashScreen.react.js" path="d:\development\js\react-native\react-native-sample-app\app\containers\splashscreen\SplashScreen.react.js">
+          <metrics statements="15" coveredstatements="11" conditionals="2" coveredconditionals="0" methods="7" coveredmethods="4"/>
+          <line num="15" count="3" type="stmt"/>
+          <line num="31" count="3" type="stmt"/>
+          <line num="36" count="3" type="stmt"/>
+          <line num="42" count="3" type="stmt"/>
+          <line num="43" count="0" type="stmt"/>
+          <line num="44" count="0" type="stmt"/>
+          <line num="45" count="0" type="stmt"/>
+          <line num="46" count="0" type="stmt"/>
+          <line num="53" count="3" type="stmt"/>
+          <line num="54" count="3" type="stmt"/>
+          <line num="66" count="3" type="stmt"/>
+          <line num="67" count="3" type="stmt"/>
+          <line num="69" count="4" type="stmt"/>
+          <line num="73" count="3" type="stmt"/>
+          <line num="74" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="app.redux">
+        <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <file name="configureStore.js" path="d:\development\js\react-native\react-native-sample-app\app\redux\configureStore.js">
+          <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+          <line num="10" count="2" type="stmt"/>
+          <line num="11" count="2" type="stmt"/>
+          <line num="13" count="2" type="stmt"/>
+          <line num="14" count="2" type="stmt"/>
+          <line num="15" count="2" type="stmt"/>
+        </file>
+        <file name="rootReducer.js" path="d:\development\js\react-native\react-native-sample-app\app\redux\rootReducer.js">
+          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        </file>
+      </package>
+      <package name="app.redux.middleware">
+        <metrics statements="35" coveredstatements="10" conditionals="14" coveredconditionals="2" methods="12" coveredmethods="6"/>
+        <file name="apiCall.js" path="d:\development\js\react-native\react-native-sample-app\app\redux\middleware\apiCall.js">
+          <metrics statements="16" coveredstatements="5" conditionals="5" coveredconditionals="1" methods="6" coveredmethods="3"/>
+          <line num="4" count="5" type="stmt"/>
+          <line num="7" count="0" type="stmt"/>
+          <line num="15" count="0" type="stmt"/>
+          <line num="16" count="0" type="stmt"/>
+          <line num="17" count="0" type="stmt"/>
+          <line num="19" count="0" type="stmt"/>
+          <line num="23" count="2" type="stmt"/>
+          <line num="24" count="2" type="stmt"/>
+          <line num="25" count="2" type="stmt"/>
+          <line num="26" count="2" type="stmt"/>
+          <line num="28" count="0" type="stmt"/>
+          <line num="29" count="0" type="stmt"/>
+          <line num="30" count="0" type="stmt"/>
+          <line num="31" count="0" type="stmt"/>
+          <line num="33" count="0" type="stmt"/>
+          <line num="34" count="0" type="stmt"/>
+        </file>
+        <file name="authenticatedApiCall.js" path="d:\development\js\react-native\react-native-sample-app\app\redux\middleware\authenticatedApiCall.js">
+          <metrics statements="19" coveredstatements="5" conditionals="9" coveredconditionals="1" methods="6" coveredmethods="3"/>
+          <line num="4" count="5" type="stmt"/>
+          <line num="7" count="0" type="stmt"/>
+          <line num="8" count="0" type="stmt"/>
+          <line num="9" count="0" type="stmt"/>
+          <line num="11" count="0" type="stmt"/>
+          <line num="20" count="0" type="stmt"/>
+          <line num="21" count="0" type="stmt"/>
+          <line num="22" count="0" type="stmt"/>
+          <line num="24" count="0" type="stmt"/>
+          <line num="28" count="2" type="stmt"/>
+          <line num="29" count="2" type="stmt"/>
+          <line num="30" count="2" type="stmt"/>
+          <line num="31" count="2" type="stmt"/>
+          <line num="33" count="0" type="stmt"/>
+          <line num="34" count="0" type="stmt"/>
+          <line num="35" count="0" type="stmt"/>
+          <line num="36" count="0" type="stmt"/>
+          <line num="38" count="0" type="stmt"/>
+          <line num="39" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="app.redux.reducers">
+        <metrics statements="13" coveredstatements="8" conditionals="12" coveredconditionals="5" methods="2" coveredmethods="2"/>
+        <file name="flagsReducer.js" path="d:\development\js\react-native\react-native-sample-app\app\redux\reducers\flagsReducer.js">
+          <metrics statements="9" coveredstatements="4" conditionals="8" coveredconditionals="2" methods="1" coveredmethods="1"/>
+          <line num="4" count="2" type="stmt"/>
+          <line num="15" count="2" type="stmt"/>
+          <line num="18" count="8" type="stmt"/>
+          <line num="21" count="0" type="stmt"/>
+          <line num="24" count="0" type="stmt"/>
+          <line num="26" count="0" type="stmt"/>
+          <line num="30" count="0" type="stmt"/>
+          <line num="33" count="0" type="stmt"/>
+          <line num="35" count="8" type="stmt"/>
+        </file>
+        <file name="routesReducer.js" path="d:\development\js\react-native\react-native-sample-app\app\redux\reducers\routesReducer.js">
+          <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="3" methods="1" coveredmethods="1"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="8" count="8" type="stmt"/>
+          <line num="11" count="2" type="stmt"/>
+          <line num="19" count="6" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>

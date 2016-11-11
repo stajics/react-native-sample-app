@@ -1,0 +1,102 @@
+exports[`test renders isLoadng button 1`] = `
+<View
+  accessibilityComponentType={undefined}
+  accessibilityLabel={undefined}
+  accessibilityTraits={undefined}
+  accessible={true}
+  hitSlop={undefined}
+  onLayout={undefined}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "opacity": 1,
+    }
+  }
+  testID={undefined}>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "height": 20,
+          "justifyContent": "center",
+          "marginTop": 50,
+          "width": 100,
+        },
+        undefined,
+      ]
+    }>
+    <ActivityIndicator
+      animating={true}
+      color="#999999"
+      hidesWhenStopped={true}
+      size="small"
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        }
+      } />
+  </View>
+</View>
+`;
+
+exports[`test renders not loading button 1`] = `
+<View
+  accessibilityComponentType={undefined}
+  accessibilityLabel={undefined}
+  accessibilityTraits={undefined}
+  accessible={true}
+  hitSlop={undefined}
+  onLayout={undefined}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "opacity": 1,
+    }
+  }
+  testID={undefined}>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "height": 20,
+          "justifyContent": "center",
+          "marginTop": 50,
+          "width": 100,
+        },
+        undefined,
+      ]
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "fontSize": 15,
+          },
+          undefined,
+        ]
+      }>
+      LOGIN
+    </Text>
+  </View>
+</View>
+`;

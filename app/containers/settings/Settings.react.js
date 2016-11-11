@@ -28,7 +28,7 @@ const defaultProps = {
   text: 'Settings',
 };
 
-class Settings extends Component {
+export class Settings extends Component {
   constructor(props) {
     super(props);
     this.onPress = this.onPress.bind(this);

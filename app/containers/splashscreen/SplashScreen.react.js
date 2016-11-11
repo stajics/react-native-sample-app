@@ -37,7 +37,7 @@ const defaultProps = {
   appTitle: 'Sample App',
 };
 
-class SplashScreen extends Component {
+export class SplashScreen extends Component {
   componentDidMount() {
     setTimeout(() => {
       AsyncStorage.getItem('authToken').then((token) => {
@@ -47,7 +47,6 @@ class SplashScreen extends Component {
         });
       });
     }, 1500);
-
   }
 
   render() {

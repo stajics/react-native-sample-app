@@ -1,0 +1,59 @@
+exports[`test renders selected tab icon 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "borderColor": "black",
+        "borderRadius": 25,
+        "borderWidth": 1,
+        "height": 50,
+        "justifyContent": "center",
+        "width": 50,
+      },
+      Object {
+        "backgroundColor": "gray",
+      },
+    ]
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "white",
+      }
+    } />
+</View>
+`;
+
+exports[`test renders unselected tab icon 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "borderColor": "black",
+        "borderRadius": 25,
+        "borderWidth": 1,
+        "height": 50,
+        "justifyContent": "center",
+        "width": 50,
+      },
+      Object {
+        "backgroundColor": "white",
+      },
+    ]
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "black",
+      }
+    } />
+</View>
+`;

@@ -1,0 +1,35 @@
+exports[`test renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "fontSize": 20,
+        "fontWeight": "bold",
+      }
+    }>
+    TEST APP TITLE
+  </Text>
+  <Image
+    source={
+      Object {
+        "uri": "http://image.flaticon.com/teams/new/1-freepik.jpg",
+      }
+    }
+    style={
+      Object {
+        "height": 200,
+        "width": 200,
+      }
+    } />
+</View>
+`;

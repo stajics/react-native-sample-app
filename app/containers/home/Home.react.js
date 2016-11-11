@@ -43,7 +43,7 @@ const defaultProps = {
   text: 'Home',
 };
 
-class Home extends Component {
+export class Home extends Component {
   constructor(props) {
     super(props);
     this.onPress = this.onPress.bind(this);
