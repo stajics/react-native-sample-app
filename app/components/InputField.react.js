@@ -13,7 +13,7 @@ const propTypes = {
 const styles = StyleSheet.create({
   defaultDimensions: {
     width: 400,
-    height: 30,
+    height: 40,
   },
   defaultMargines: {
     marginLeft: 10,

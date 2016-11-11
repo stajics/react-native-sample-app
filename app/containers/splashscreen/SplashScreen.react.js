@@ -39,12 +39,15 @@ const defaultProps = {
 
 class SplashScreen extends Component {
   componentDidMount() {
-    AsyncStorage.getItem('authToken').then((token) => {
-      if (!token) return Actions.authentication();
-      return this.props.fetchUser(token).then(() => {
-        Actions.rootTabbar();
+    setTimeout(() => {
+      AsyncStorage.getItem('authToken').then((token) => {
+        if (!token) return Actions.authentication();
+        return this.props.fetchUser(token).then(() => {
+          Actions.rootTabbar();
+        });
       });
-    });
+    }, 1500);
+
   }
 
   render() {

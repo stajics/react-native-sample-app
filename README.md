@@ -4,3 +4,7 @@
 * Redux (redux-thunk (https://github.com/gaearon/redux-thunk), redux-logger)
 * Immutable.js (https://facebook.github.io/immutable-js/)
 * react-native-router-flux (https://github.com/aksonov/react-native-router-flux)
+
+<p align="center">
+  <img src="./demo.gif" width="350"/>
+</p>
