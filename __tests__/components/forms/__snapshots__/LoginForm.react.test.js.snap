@@ -1,0 +1,335 @@
+exports[`test renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": -1,
+    }
+  }>
+  <View
+    style={
+      Array [
+        Object {
+          "borderBottomColor": "black",
+          "borderBottomWidth": 1,
+        },
+        Object {
+          "marginLeft": 10,
+          "marginRight": 10,
+        },
+        undefined,
+        Object {
+          "flexDirection": "row",
+        },
+      ]
+    }>
+    <TextInput
+      autoCapitalize="none"
+      autoCorrect={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      placeholder="username"
+      style={
+        Array [
+          Object {
+            "backgroundColor": "white",
+          },
+          Object {
+            "height": 40,
+            "width": 400,
+          },
+          Object {},
+          Object {
+            "flex": -1,
+            "textAlign": "left",
+            "textAlignVertical": "top",
+          },
+        ]
+      }
+      underlineColorAndroid="transparent"
+      value="" />
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "borderBottomColor": "black",
+          "borderBottomWidth": 1,
+        },
+        Object {
+          "marginLeft": 10,
+          "marginRight": 10,
+        },
+        undefined,
+        Object {
+          "flexDirection": "row",
+        },
+      ]
+    }>
+    <TextInput
+      autoCapitalize="none"
+      autoCorrect={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      placeholder="password"
+      secureTextEntry={true}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "white",
+          },
+          Object {
+            "height": 40,
+            "width": 400,
+          },
+          Object {},
+          Object {
+            "flex": -1,
+            "textAlign": "left",
+            "textAlignVertical": "top",
+          },
+        ]
+      }
+      underlineColorAndroid="transparent"
+      value="" />
+  </View>
+  <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    hitSlop={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+    testID={undefined}>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "borderColor": "black",
+            "borderWidth": 1,
+            "height": 20,
+            "justifyContent": "center",
+            "marginTop": 50,
+            "width": 100,
+          },
+          Object {
+            "alignItems": "center",
+            "borderColor": "black",
+            "borderWidth": 1,
+            "height": 35,
+            "justifyContent": "center",
+            "marginTop": 50,
+            "width": 100,
+          },
+        ]
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "fontSize": 15,
+            },
+            Object {
+              "fontSize": 30,
+            },
+          ]
+        }>
+        LOGIN
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "borderColor": "transparent",
+        "borderWidth": 1,
+        "height": 35,
+      }
+    } />
+</View>
+`;
+
+exports[`test renders submitting submitFailed, error 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": -1,
+    }
+  }>
+  <View
+    style={
+      Array [
+        Object {
+          "borderBottomColor": "black",
+          "borderBottomWidth": 1,
+        },
+        Object {
+          "marginLeft": 10,
+          "marginRight": 10,
+        },
+        undefined,
+        Object {
+          "flexDirection": "row",
+        },
+      ]
+    }>
+    <TextInput
+      autoCapitalize="none"
+      autoCorrect={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      placeholder="username"
+      style={
+        Array [
+          Object {
+            "backgroundColor": "white",
+          },
+          Object {
+            "height": 40,
+            "width": 400,
+          },
+          Object {},
+          Object {
+            "flex": -1,
+            "textAlign": "left",
+            "textAlignVertical": "top",
+          },
+        ]
+      }
+      underlineColorAndroid="transparent"
+      value="" />
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "borderBottomColor": "black",
+          "borderBottomWidth": 1,
+        },
+        Object {
+          "marginLeft": 10,
+          "marginRight": 10,
+        },
+        undefined,
+        Object {
+          "flexDirection": "row",
+        },
+      ]
+    }>
+    <TextInput
+      autoCapitalize="none"
+      autoCorrect={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      placeholder="password"
+      secureTextEntry={true}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "white",
+          },
+          Object {
+            "height": 40,
+            "width": 400,
+          },
+          Object {},
+          Object {
+            "flex": -1,
+            "textAlign": "left",
+            "textAlignVertical": "top",
+          },
+        ]
+      }
+      underlineColorAndroid="transparent"
+      value="" />
+  </View>
+  <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    hitSlop={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+    testID={undefined}>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "borderColor": "black",
+            "borderWidth": 1,
+            "height": 20,
+            "justifyContent": "center",
+            "marginTop": 50,
+            "width": 100,
+          },
+          Object {
+            "alignItems": "center",
+            "borderColor": "black",
+            "borderWidth": 1,
+            "height": 35,
+            "justifyContent": "center",
+            "marginTop": 50,
+            "width": 100,
+          },
+        ]
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "fontSize": 15,
+            },
+            Object {
+              "fontSize": 30,
+            },
+          ]
+        }>
+        LOGIN
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "borderColor": "transparent",
+        "borderWidth": 1,
+        "height": 35,
+      }
+    } />
+</View>
+`;

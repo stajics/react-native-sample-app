@@ -8,6 +8,7 @@ const propTypes = {
   height: React.PropTypes.number,
   containerStyle: React.PropTypes.object,
   textInputStyle: React.PropTypes.object,
+  input: React.PropTypes.object, // for redux-form
 };
 
 const styles = StyleSheet.create({
@@ -36,7 +37,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const InputField = ({ containerStyle, textInputStyle, width, height, ...otherProps }) => {
+const InputField = ({ containerStyle, textInputStyle, width, height, ...otherProps }) => { // eslint-disable-line max-len
   const dimensions = (width && height) ? { width, height } : styles.defaultDimensions;
   return (
     <View

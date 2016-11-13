@@ -1,3 +1,4 @@
+/* eslint import/no-named-as-default: 'off' */
 import React from 'react';
 import { Actions, Scene } from 'react-native-router-flux';
 // components

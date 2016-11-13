@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "lint": "./node_modules/.bin/eslint eslint app test *.js"
   },
   "dependencies": {
     "immutable": "^3.8.1",
@@ -13,6 +14,7 @@
     "react-native-router-flux": "3.34.0",
     "react-redux": "^4.4.5",
     "redux": "^3.6.0",
+    "redux-form": "^6.2.0",
     "redux-logger": "^2.7.4",
     "redux-thunk": "^2.1.0"
   },
